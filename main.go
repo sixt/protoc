@@ -18,10 +18,10 @@ import (
 	"syscall"
 )
 
-//go:generate go run -tags generate gen.go 3.11.4
+//go:generate go run -tags generate gen.go 3.17.1
 
 // Keep this version in sync with the go:generate statement above
-const version = "3.11.4"
+const version = "3.17.1"
 
 type repo interface {
 	Checkout(rev string) error
@@ -239,7 +239,7 @@ func extractProtoc() (string, error) {
 }
 
 // runProtoc() is the main function. It is moved outside of main to make use of
-// defer statemenets. All that main() does now is os.Exit() which is not
+// defer statements. All that main() does now is os.Exit() which is not
 // defer-friendly at all.
 func runProtoc() int {
 	os.MkdirAll(cacheFile(), 0755)

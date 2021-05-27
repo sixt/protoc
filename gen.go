@@ -1,4 +1,4 @@
-// +build generage
+// +build generate
 
 package main
 
